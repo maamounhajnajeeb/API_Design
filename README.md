@@ -1,4 +1,6 @@
-* Apartment OutPut API
+# Apartment
+## Apartment OutPut API
+
 ```json
 {
     "id": 3,
@@ -13,20 +15,21 @@
     "region": {
         "id": 52,
         "name": "Al Qanawat",
-        // note: mhn: to be deleted
-        // "update_date": "2024-09-29T11:17:21.232123+03:00",
-        // "create_date": "2024-09-29T11:17:21.232020+03:00",
         "governorate": {
             "id": 1,
             "name": "Damascus"
         }
     },
-    // note: mhn: add images details without create and update dates
     "images": [
         {
             "id": 613,
             "image": "/files/Property_Images/apartment_image_51000.jpg",
             "is_special": false
+        },
+        {
+            "id": 614,
+            "image": "/files/Property_Images/apartment_image_51001.jpg",
+            "is_special": true
         }
     ],
     "favorites": 0,
@@ -62,13 +65,14 @@
     "apartment_type": "Apartment",
     "registration_statement": null,
     "equipment": "agreement, tax, then",
-    // note: additional
     "update_date": "2024-09-29T11:17:21.232123+03:00",
     "create_date": "2024-09-29T11:17:21.232020+03:00"
 }
 ```
 
-* Villa Output API
+# Villa
+## Villa Output API
+
 ```json
 {
     "id": 53,
@@ -93,6 +97,11 @@
             "id": 613,
             "image": "/files/Property_Images/apartment_image_51000.jpg",
             "is_special": false
+        },
+        {
+            "id": 614,
+            "image": "/files/Property_Images/apartment_image_51001.jpg",
+            "is_special": true
         }
     ],
     "favorites": 0,
@@ -131,7 +140,9 @@
 }
 ```
 
-* Governorate Output API
+# Governorate
+## Governorate Output API
+
 ```json
 {
     "id": 1,
@@ -139,7 +150,9 @@
 }
 ```
 
-* Region Output API
+# Region
+## Region Output API
+
 ```json
 {
     "id": 1,
@@ -204,8 +217,13 @@
 }
 ```
 
-*  GeneralPropertyCard(Apartment and villa) Output API
-["Search", "List All properties, villas, apartments", "favorites"]
+# Property
+## Property Card API
+This API needed at:
+1. Search
+2. List All [villas, apartments]
+3. favorites
+
 ```json
 {
     "id": 207,
@@ -232,11 +250,11 @@
 }
 ```
 
-* Booking Output API
+# Booking App
+## 1] Booking Output API
+
 ```json
 {
-    "create_date": "2024-10-07T18:57:00.536865+03:00",
-    "update_date": "2024-10-09T11:05:49.965942+03:00",
     "id": 105,
     "related_property": {
         "id": 151,
@@ -265,7 +283,7 @@
     "client": {
         "id": 104,
         "phone_number": "+963997749221",
-        "full_name": ""
+        "full_name": "Mohammed Rajab"
     },
     "client_checking_range": {
         "lower": "2159-08-08T14:00:00+03:00",
@@ -283,14 +301,14 @@
     "num_of_children": 6,
     "price": 1500,
     "status": "Paid",
+    "create_date": "2024-10-07T18:57:00.536865+03:00",
+    "update_date": "2024-10-09T11:05:49.965942+03:00",
 }
 ```
 
-* RejectedCancelledBooking Output API
+## 2] RejectedCancelledBooking Output API
 ```json
 {
-    "create_date": "2024-07-20T12:19:52.922819+03:00",
-    "update_date": "2024-07-20T12:20:31.206204+03:00",
     "id": 38,
     "booking": {
         "id": 59,
@@ -304,11 +322,13 @@
         "checked_out": false
     },
     "reason": "just another loream",
-    "is_read": true
+    "is_read": true,
+    "create_date": "2024-07-20T12:19:52.922819+03:00",
+    "update_date": "2024-07-20T12:20:31.206204+03:00"
 }
 ```
 
-* Intersted Output API
+## 3] Intersted Output API
 ```json
 {
     "id": 15,
@@ -341,11 +361,9 @@
 }
 ```
 
-* 
-
-
-
-* MTN Payment APIs "create payment" Output API
+# PaymentGates App
+## 1] MTN App
+### Create payment Output API
 ```json
 {
     "response_datetime": "2024-10-29T09:20:20.366+03:00",
@@ -391,10 +409,7 @@
 }
 ```
 
-* 
-
-
-* MTN Payment APIs "payment by phone" Output API
+### Payment by phone output API
 ```json
 {
     "response_datetime": "2024-10-29T09:22:24.588+03:00",
@@ -437,10 +452,7 @@
 }
 ```
 
-* 
-
-
-* MTN Payment APIs "confirm payment" Output API
+### Confirm payment output API
 ```json
 {
     "response_datetime": "2024-10-29T09:37:34.563+03:00",
@@ -483,11 +495,7 @@
 }
 ```
 
-* 
-
-
-
-* MTN Payment APIs "check payment status" Output API
+### Check payment status output API
 ```json
 {
     "response_datetime": "2024-10-29T09:39:30.970+03:00",
@@ -533,25 +541,75 @@
 }
 ```
 
-* 
+## 2] Fatora App
 
-* Fatora create API
-* Input
-* OutPut
-
-
-* Fatora check status API
-* Input
-* OutPut
-
-
-* 
-
-* VisitingTime Output API
+### Fatora create payment API
+#### Input
 ```json
 {
-    "create_date": "2024-07-22T08:20:26.881734+03:00",
-    "update_date": "2024-07-22T08:20:26.881734+03:00",
+    "object_id": 87,
+    "model_name": "Booking",
+    "notes": "hello" // optional
+}
+```
+#### OutPut
+```json
+{
+    "response_datetime": "2024-09-23T14:08:53.459+03:00",
+    "success": true,
+    "status_code": 200,
+    "message": "Payment request result",
+    "data": {
+        "ErrorMessage": "Payment request successfully intialized",
+        "ErrorCode": 0,
+        "Data": {
+            "url": "https://egate-t.fatora.me/start/9b330a6a-157a-4860-ab68-881c77e1930f/en/1",
+            "paymentId": "9b330a6a-157a-4860-ab68-881c77e1930f"
+        }
+    }
+}
+```
+
+### Fatora check payment status API
+#### Input
+```json
+{
+    "payment_uuid": "1b2d8761-fd21-4495-a09e-de77ff9575e2"
+}
+
+```
+#### OutPut
+```json
+{
+    "response_datetime": "2024-09-23T19:22:08.868+03:00",
+    "success": true,
+    "status_code": 200,
+    "message": "Payment status result",
+    "data": {
+        "ErrorMessage": "Check payment status success",
+        "ErrorCode": 0,
+        "Data": {
+            "status": "Payment Pending",
+            "creationTimestamp": "2024-09-23 19:21:36.780",
+            "rrn": null,
+            "amount": "65412.3",
+            "terminalId": "14740089",
+            "notes": "hello",
+            "callbackURL": "https://www.google.com/",
+            "triggerURL": "http://127.0.0.1:8000/api/v1/payment/fatora/payment_trigger_api/90/booking/"
+        }
+    }
+}
+```
+
+## 3] Syriatel App
+### Create payment output API
+
+
+# Availability App
+## 1] VisitingTime Output API
+```json
+{
     "id": 103,
     "related_property": {
         "id": 1,
@@ -565,18 +623,15 @@
     },
     "str_range": "hours: 16, minutes: 40",
     "visiting_period_in_minutes": 60,
-    "num_of_available_visitings": 16
+    "num_of_available_visitings": 16,
+    "create_date": "2024-07-22T08:20:26.881734+03:00",
+    "update_date": "2024-07-22T08:20:26.881734+03:00"
 }
 ```
 
-*
-
-* BookingVisit Output API
-
+## 2] BookingVisit Output API
 ```json
 {
-    "create_date": "2024-07-22T12:04:17.176517+03:00",
-    "update_date": "2024-07-22T12:04:17.176517+03:00",
     "id": 61,
     "visiting_time": {
         "id": 103,
@@ -600,27 +655,27 @@
         "bounds": "()"
     },
     "checked": false,
-    "visit_status": "On hold"
+    "visit_status": "On hold", // to be changed into Pending instead of 'On hold'
+    "create_date": "2024-07-22T12:04:17.176517+03:00",
+    "update_date": "2024-07-22T12:04:17.176517+03:00",
 }
 ```
 
-* 
-
-* RejectedCancelledBookingVisit Output API
+## 3] RejectedCancelledBookingVisit output API
 ```json
 {
-    "create_date": "2024-07-22T20:02:19.702080+03:00",
-    "update_date": "2024-07-22T20:02:19.702080+03:00",
     "id": 40,
     "original_booking_visit": {
         "id": 71,
         "visit_status": "Cancelled"
     },
     "reason": "I don't know",
-    "is_read": false
+    "is_read": false,
+    "create_date": "2024-07-22T20:02:19.702080+03:00",
+    "update_date": "2024-07-22T20:02:19.702080+03:00",
 }
 ```
 
-* 
+# Notification App
 
-* 
+# Activity App
