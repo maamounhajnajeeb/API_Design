@@ -57,7 +57,7 @@
 
 # Property App
 ## 1] Property card API
-~`new api (needed for flutter team)`~</br>
+`~new api (needed for flutter team)~`</br>
 This API needed at:
 1. Search
 2. List All [villas, apartments]
@@ -358,7 +358,7 @@ This API needed at:
 
 # PaymentGates App
 ## 1] MTN App
-### Create payment Output API
+### MTN create payment output API
 ```json
 {
     "response_datetime": "2024-10-29T09:20:20.366+03:00",
@@ -404,7 +404,7 @@ This API needed at:
 }
 ```
 
-### Payment by phone output API
+### MTN payment by phone output API
 ```json
 {
     "response_datetime": "2024-10-29T09:22:24.588+03:00",
@@ -447,7 +447,7 @@ This API needed at:
 }
 ```
 
-### Confirm payment output API
+### MTN confirm payment output API
 ```json
 {
     "response_datetime": "2024-10-29T09:37:34.563+03:00",
@@ -490,7 +490,7 @@ This API needed at:
 }
 ```
 
-### Check payment status output API
+### MTN check payment status output API
 ```json
 {
     "response_datetime": "2024-10-29T09:39:30.970+03:00",
