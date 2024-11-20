@@ -1,5 +1,112 @@
-# Apartment
-## Apartment OutPut API
+# Search App
+## Search output API
+```json
+{
+    "id": 207,
+    "region": {
+        "id": 4,
+        "name": "تشرين",
+        "governorate": {
+            "id": 1,
+            "name": "دمشق"
+        }
+    },
+    "images": [
+        {
+            "id": 613,
+            "image": "/files/Property_Images/apartment_image_51000.jpg",
+            "is_special": false
+        }
+    ],
+    "location": {
+        "latitude": 33.53548684822669,
+        "longitude": 36.215399900455466
+    },
+    "location_details": "96640 نديم Vista Apt. 134\nالنقيبview, WA 77637",
+    "price": 771,
+    "number_of_rooms": 3,
+    "number_of_bathrooms": 2,
+    "property_side": "غرب",
+    "description": "مليون وانهاء والديون والحزب المجتمع الخاطفة مئات. المنتصر اليميني اتفاق للأراضي تزامناً. الجوي مرمى وإعلان إختار.",
+    "furniture": false,
+    "property_rights": "Green title deed",
+    "contract_type": "Daily rent",
+    "total_area": 232.67807604148533,
+    "internal_area": 206.7199672991119,
+    "external_area": 84.56902835532932,
+    "view_360": null,
+    "nearby_places": "لعملة, وصل, هو",
+    "additional_services": "بالتوقيع, الأمور",
+    "special": true,
+    "parking": 2,
+    "favorites": 0,
+    "property_type": "شقة",
+    "floor_number": 13,
+    "elevator": true,
+    "surface_ownership": "Nothing",
+    "water_tank": "Individually",
+    "fuel_tank": "Shared",
+    "apartment_type": "Clinic",
+    "registration_statement": null,
+    "equipment": "ألمّ, الخاطفة, حالية",
+    "is_favorite": null,
+    "update_date": "2024-11-17T11:24:00.661720+03:00",
+    "create_date": "2024-11-17T11:24:00.661685+03:00",
+}
+```
+
+# Property App
+## 1] Property card API
+~`new api (needed for flutter team)`~</br>
+This API needed at:
+1. Search
+2. List All [villas, apartments]
+3. favorites
+
+```json
+{
+    "id": 207,
+    "region": {
+        "id": 4,
+        "name": "تشرين",
+        "governorate": {
+            "id": 1,
+            "name": "دمشق"
+        }
+    },
+    "images": [
+        {
+            "id": 613,
+            "image": "/files/Property_Images/apartment_image_51000.jpg",
+            "is_special": false
+        }
+    ],
+    "price": "",
+    "total_area": "",
+    "number_of_rooms": "",
+    "update_date": "2024-11-17T11:24:00.661720+03:00",
+    "create_date": "2024-11-17T11:24:00.661685+03:00",
+}
+```
+
+## 2] Region output API
+```json
+{
+    "id": 1,
+    "name": "الحرية_ عش الورور",
+    "governorate": 1
+}
+```
+
+## 3] Governorate output API
+```json
+{
+    "id": 1,
+    "name": "Damascus"
+}
+```
+
+## 4] Apartment OutPut API
 
 ```json
 {
@@ -70,9 +177,7 @@
 }
 ```
 
-# Villa
-## Villa Output API
-
+## 5] Villa Output API
 ```json
 {
     "id": 53,
@@ -137,116 +242,6 @@
     "kitchen_kit": "including, approach, if, picture",
     "update_date": "2024-09-29T11:17:25.940491+03:00",
     "create_date": "2024-09-29T11:17:25.940450+03:00"
-}
-```
-
-# Governorate
-## Governorate Output API
-
-```json
-{
-    "id": 1,
-    "name": "Damascus"
-}
-```
-
-# Region
-## Region Output API
-
-```json
-{
-    "id": 1,
-    "name": "الحرية_ عش الورور",
-    "governorate": 1
-}
-```
-
-* Search Output API
-```json
-{
-    "id": 207,
-    "region": {
-        "id": 4,
-        "name": "تشرين",
-        "governorate": {
-            "id": 1,
-            "name": "دمشق"
-        }
-    },
-    "images": [
-        {
-            "id": 613,
-            "image": "/files/Property_Images/apartment_image_51000.jpg",
-            "is_special": false
-        }
-    ],
-    "location": {
-        "latitude": 33.53548684822669,
-        "longitude": 36.215399900455466
-    },
-    "location_details": "96640 نديم Vista Apt. 134\nالنقيبview, WA 77637",
-    "price": 771,
-    "number_of_rooms": 3,
-    "number_of_bathrooms": 2,
-    "property_side": "غرب",
-    "description": "مليون وانهاء والديون والحزب المجتمع الخاطفة مئات. المنتصر اليميني اتفاق للأراضي تزامناً. الجوي مرمى وإعلان إختار.",
-    "furniture": false,
-    "property_rights": "Green title deed",
-    "contract_type": "Daily rent",
-    "total_area": 232.67807604148533,
-    "internal_area": 206.7199672991119,
-    "external_area": 84.56902835532932,
-    "view_360": null,
-    "nearby_places": "لعملة, وصل, هو",
-    "additional_services": "بالتوقيع, الأمور",
-    "special": true,
-    "parking": 2,
-    "favorites": 0,
-    "property_type": "شقة",
-    "floor_number": 13,
-    "elevator": true,
-    "surface_ownership": "Nothing",
-    "water_tank": "Individually",
-    "fuel_tank": "Shared",
-    "apartment_type": "Clinic",
-    "registration_statement": null,
-    "equipment": "ألمّ, الخاطفة, حالية",
-    "is_favorite": null,
-    "update_date": "2024-11-17T11:24:00.661720+03:00",
-    "create_date": "2024-11-17T11:24:00.661685+03:00",
-}
-```
-
-# Property
-## Property Card API
-This API needed at:
-1. Search
-2. List All [villas, apartments]
-3. favorites
-
-```json
-{
-    "id": 207,
-    "region": {
-        "id": 4,
-        "name": "تشرين",
-        "governorate": {
-            "id": 1,
-            "name": "دمشق"
-        }
-    },
-    "images": [
-        {
-            "id": 613,
-            "image": "/files/Property_Images/apartment_image_51000.jpg",
-            "is_special": false
-        }
-    ],
-    "price": "",
-    "total_area": "",
-    "number_of_rooms": "",
-    "update_date": "2024-11-17T11:24:00.661720+03:00",
-    "create_date": "2024-11-17T11:24:00.661685+03:00",
 }
 ```
 
