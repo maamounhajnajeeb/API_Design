@@ -1,3 +1,13 @@
+# Authentication App
+## Verify OTP output API
+waiting time error</br>
+```json
+{
+    "message": "Entering OTP is locked by now",
+    "try_after": 5 // standard is seconds
+}
+```
+
 # Search App
 ## Search output API
 ```json
@@ -675,16 +685,16 @@ This API needed at:
 ## Notifications by authenticated user output API
 ```json
 {
-"id": 5,
-"update_date": "datetime",
-"create_date": "datetime",
-"title": "any title",
-"body": "any body",
-"msg_data": { // need to map each ntf to it's origin
-    "object_id": "the specified object id",
-    "model_name": "any model name"
-},
-"is_read": False
+    "id": 5,
+    "update_date": "datetime",
+    "create_date": "datetime",
+    "title": "any title",
+    "body": "any body",
+    "msg_data": { // need to map each ntf to it's origin
+        "object_id": "the specified object id",
+        "model_name": "any model name"
+    },
+    "is_read": False
 }
 ```
 
