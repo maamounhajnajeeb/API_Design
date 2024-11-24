@@ -672,5 +672,20 @@ This API needed at:
 ```
 
 # Notification App
+## Notifications by authenticated user output API
+```json
+{
+"id": 5,
+"update_date": "datetime",
+"create_date": "datetime",
+"title": "any title",
+"body": "any body",
+"msg_data": { // need to map each ntf to it's origin
+    "object_id": "the specified object id",
+    "model_name": "any model name"
+},
+"is_read": False
+}
+```
 
 # Activity App
